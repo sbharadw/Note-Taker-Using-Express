@@ -1,42 +1,9 @@
-/*
-const fs = require('fs'); 
-const notesData = require('../db/db.json')
-
-//const path = require('path');
-
-//const OUTPUT_DIR = path.resolve(__dirname, "../db");
-//const outputPath = path.join(OUTPUT_DIR, "db.json");
-
-
-module.exports = (app) => {
-    
-app.get('/notes', (req, res) => {
-
-fs.readFile(notesData, (err, data) => {
-        
-err ? console.err(err) : res.send(data)
-        
-})     
-})
-
-app.post('/notes', (req, res) => {
-
-notesData.push(req.body);
-res.json(true);
-
-})
-
-}
-
-*/
-
 const toDo = require('../db/db.json');
 const fs = require('fs');
 let uniqid = require('uniqid');
 let id = uniqid;
 
 module.exports = (app) => {
-
 
 app.get('/api/notes', (req, res) => res.send(toDo));
 
@@ -55,14 +22,16 @@ app.post('/api/notes', (req, res) => {
   });
 
 
-
   app.delete("/api/notes/:id", (req, res) => {
-	const noteDelete = req.params.id;
+    const noteDelete = req.params.id;
+console.log(noteDelete);    
 	for (let i = 0; i < toDo.length; i++) {
 		if (toDo[i].id === noteDelete) {
-			toDo.splice(i, 1);
+            toDo.splice(i, 1);
+            i--;
 		}
-	}
+    }
+    console.log(toDo);
 	res.json(toDo);
 
 	fs.writeFile('db/db.json', JSON.stringify(toDo), function (err, result) {

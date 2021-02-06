@@ -23,10 +23,12 @@ app.use(express.json());
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
 
-app.use(express.static("./public"));
+app.use(express.static('public'));
 require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
 
+
+//For future reference 
 //app.use('/api', apiRoutes)
 //app.use('/', htmlRoutes)
 //app.use('/static', express.static(path.join(__dirname, 'public')))
