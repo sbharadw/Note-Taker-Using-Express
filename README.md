@@ -2,6 +2,13 @@
 
 This is an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
 
+## Links 
+
+Repo Link: https://github.com/sbharadw/Note-Taker-Using-Express
+
+Heroku Link: 
+
+
 ## User Story
 
 ```
@@ -32,6 +39,13 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Mock-Up
 
 The following images show the web application's appearance and functionality: 
+
+![mockup image](Images/image1.png)
+![mockup image](Images/image2.png)
+![mockup image](Images/image3.png)
+
+
+
 
 
 
