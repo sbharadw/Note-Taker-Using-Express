@@ -4,9 +4,9 @@ This is an application called Note Taker that can be used to write and save note
 
 ## Links 
 
-Repo Link: https://github.com/sbharadw/Note-Taker-Using-Express
+<b>Repo Link:</b> https://github.com/sbharadw/Note-Taker-Using-Express
 
-Heroku Link: 
+<b>Heroku Link:</b> https://sleepy-reaches-42492.herokuapp.com/
 
 
 ## User Story
